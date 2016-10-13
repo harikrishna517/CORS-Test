@@ -52,7 +52,8 @@ if (forcetk.Client === undefined) {
      */
     forcetk.Client = function(clientId, loginUrl, proxyUrl) {
         this.clientId = clientId;
-        this.loginUrl = loginUrl || 'https://login.salesforce.com/';
+        //this.loginUrl = loginUrl || 'https://login.salesforce.com/';
+        this.loginUrl = loginUrl || 'https://test.salesforce.com/';
         if (typeof proxyUrl === 'undefined' || proxyUrl === null) {
             if (location.protocol === 'file:') {
                 // In PhoneGap
