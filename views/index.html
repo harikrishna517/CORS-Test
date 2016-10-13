@@ -37,7 +37,8 @@ body {
     
     function callEndpoint() {
         client.create('Lead', {
-            Name: 'Test Rest Api Lead',
+            FirstName: 'Test',
+            LastName: 'Lead',
             Company: 'Test Company Lead'
         }, function(response){
             console.log(response);
