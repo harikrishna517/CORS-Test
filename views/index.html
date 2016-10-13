@@ -24,7 +24,7 @@ body {
 
     client.setSessionToken('<%= oauth.access_token %>', 'v33.0', '<%= oauth.instance_url %>');
     
-    function callEndpoint() {
+    /* function callEndpoint() {
         client.create('Account', {
             Name: 'Test Rest Api'
         }, function(response){
@@ -33,7 +33,20 @@ body {
         }, function(request, status, response){
             $("#message").html("Error: " + status);
         });
+    } */
+    
+    function callEndpoint() {
+        client.create('Lead', {
+            Name: 'Test Rest Api Lead',
+            Company: 'Test Company Lead'
+        }, function(response){
+            console.log(response);
+            $("#message").html("Salesforce Rest Api Success");
+        }, function(request, status, response){
+            $("#message").html("Error: " + status);
+        });
     }
+    
   </script>
 </body>
 </html>
