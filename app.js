@@ -7,7 +7,7 @@ var org = nforce.createConnection({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
   redirectUri: process.env.REDIRECT_URI,
-  environment: 'sandbox'
+  environment: 'production'
 });
 
 app.engine('.html', require('ejs').__express);
